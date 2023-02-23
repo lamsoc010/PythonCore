@@ -51,3 +51,4 @@ def demSoNguyenToTrongMang():
                 soSoNguyenTo = soSoNguyenTo + 1
     return soSoNguyenTo
 print("Số số nguyên tố trong mảng là: ", demSoNguyenToTrongMang())
+
