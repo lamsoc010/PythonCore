@@ -25,7 +25,7 @@ text_color = (0, 0, 0)
 text_draw = ImageDraw.Draw(background)
 
 # Chèn các trường dữ liệu vào thẻ
-text_draw.text((170, 10), "Student ID: {}".format(student_id), fill=text_color, font=font)
+text_draw.text((200, 10), "Student ID: {}".format(student_id), fill=text_color, font=font)
 text_draw.text((200, 50), "Student Name: {}".format(student_name), fill=text_color, font=font)
 text_draw.text((200, 90), "Course: {}".format(course), fill=text_color, font=font)
 text_draw.text((200, 130), "Academic Year: {}".format(academic_year), fill=text_color, font=font)
