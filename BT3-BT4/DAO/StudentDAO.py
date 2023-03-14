@@ -11,8 +11,8 @@ class StudentDAO(IStudentDAO):
 
     def insert(self, student):
         sql = "Insert into Students(MaSinhVien, HoVaTen, NgaySinh, DToan, DLy, MHoa, XepLoai) values(%s,%s,%s,%s,%s,%s,%s)"
-        val = (student.maSV, f"{student.ho} {student.ten}", datetime.strptime(student.ngaySinh,
-               '%d/%m/%Y'), student.mToan, student.mLy, student.mHoa, student.xepLoai)
+        val = (student.maSV, f"{student.ho} {student.ten}", datetime.strptime(student.ngaySinh, '%d/%m/%Y'), 
+               '{:.2f}'.format(student.mToan), '{:.2f}'.format(student.mLy), '{:.2f}'.format(student.mHoa), student.xepLoai)
         self.cursor.execute(sql, val)
         self.cnx.commit()
         return self.cursor.lastrowid  # lấy id của bản ghi vừa insert

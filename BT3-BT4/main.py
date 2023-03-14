@@ -31,6 +31,10 @@ class main:
         for i in range(len(listStudent)):
             print(listStudent[i].maSV, listStudent[i].ho, listStudent[i].ten,
                   listStudent[i].ngaySinh, listStudent[i].mTrungBinh(), listStudent[i].xepLoai)
+    def insertListStudent(self, url, obj):
+        listStudent = rw.readExcel(url, obj)
+        for i in range(len(listStudent)):
+            self.insertStudent(listStudent[i])
 
 
 obj = main()
@@ -39,19 +43,19 @@ obj = main()
 
 # insert data
 # student = student.Student('B17DCCN001', 'Nguyễn Văn',
-#                           'A', '01/01/2000', 10, 10, 10)
+#                           'A', '01/01/2000', 9.5, 9.5, 9.5)
 # obj.insertStudent(student)
 
 
 # update data
-student = student.Student('B17DCCN001', 'Nguyễn Văn',
-                          'C', '01/01/2000', 10, 10, 10)
-obj.updateStudent(student)
+# student = student.Student('B17DCCN001', 'Nguyễn Văn',
+#                           'C', '01/01/2000', 10, 10, 10)
+# obj.updateStudent(student)
 
 # delete data
 # obj.deleteStudent('B17DCCN001')
 
 # read data from excel
-# url = 'F:\Desktop\python\TH2\pxu_python_TH2\input.xlsx'
-# objType = student.Student
-# obj.readExcel(url, objType)
+url = 'D:\\Study\\DHPhuXuan\\Nam3\\HK-Spring\\Python\\BT3-BT4\\input.xlsx'
+objType = student.Student
+obj.insertListStudent(url, objType)

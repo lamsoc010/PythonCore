@@ -25,7 +25,7 @@ class DbConnect(object):
             host="localhost",
             user="root",
             password="",
-            database="pxu_python_TH3"
+            database="python"
 
         )
 
